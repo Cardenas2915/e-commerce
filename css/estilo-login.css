@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+h1{ 
+    margin: 0;
+}
+
+:root{
+    --padding-container:100px 0;
+    --color-title:#001A49;
+}
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 800px;
+    display: grid;
+    grid-template-rows: 110px 1fr;
+    
+    overflow: hidden;
+}
+
+.nav{
+    --padding-container:0;
+    display: flex;
+    align-items: center;
+    margin:0 100px;
+}
+.nav_title{
+    width: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.nombre,
+.subnombre{
+    color: #fff;
+}
+
+.nav_items{
+    list-style: none;
+}
+
+.nav_links{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_links:hover{
+    background: rgba(255, 255, 255, 0.315);
+}
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.nav_img{
+    display: block;
+    width: 30px;
+}
+.nav_close{
+    display: var(--show, none);
+}
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/canasta.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+#banner{
+    color: #fff;
+    display: grid;
+    grid-template-columns:auto;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+@media (max-width:768px){
+    .nav_menu{
+        display: block;
+    }
+    .nav{
+        background: none;
+        
+    }
+    .hero{
+        padding: none;
+    }
+
+    .nav_link-menu{
+        position: fixed;
+        background-color: rgb(134, 204, 134);
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition:all 0.4s ease-in-out;
+        
+    }
+    
+    .nav_link--show{
+        --show:block;
+        opacity: 1;
+        pointer-events: unset;
+        
+    }
+    .nav_close{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hero_tittle{
+        font-size: 2.5rem;
+    }
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .5);
+        display: none;
+    }
+}
+
+
+/* form */
+
+.form{
+    color: black;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#54fa93 0.5px, transparent 0.5px), radial-gradient(#54fa93 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow:0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
+.form_title{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.form_paragraph{
+    font-weight: 300;
+}
+.form_link{
+    font-weight:400;
+    color: rgb(105, 20, 175);
+    cursor: pointer;
+}
+
+.form_link:hover{
+text-decoration: none;
+}
+
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form_group{
+    position: relative;
+    --color:#5757577e;
+}
+.form_input{
+    width: 100%;
+    background:none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+
+}
+
+.form_input:not(:placeholder-shown){
+    color: #4d4646;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position:absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form_submit{
+    background: #3866f2;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown) ~ .form_line{
+   transform: scale(1);
+}
+
+@media (max-width:425px){
+
+    .form_title{
+        font-size: 1.8rem;
+    }
+}
+
+
+/* footer */
+
+
+.footer{
+    padding:5px 30px;
+    background-color: #1D293F;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    text-align: center; 
+}
+.footer_paragraph{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer_paragraph:hover{
+    text-decoration: underline;
+}
+
+.footer_copy{
+    text-align: center;
+    color: #fff;
+}
+.footer_copyright{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.footer_img{
+    width: 40px;
+    padding: 0 5px;
+}
+
+.redes{
+    color: #fff;
+    padding: 5px 0;
+}
+.footer_social{
+    justify-content: center;
+    align-items: center;
+}
