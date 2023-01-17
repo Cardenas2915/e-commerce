@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/estilo-registro.css">
+    <link rel="stylesheet" href="../css/estilo-login.css">
     <title>Login</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
         <div id="back_menu"></div>
         <ul class="nav_link  nav_link-menu">
             <li class="nav_items">
-                <a href="../index.html" class="nav_links"><i class='bx bxs-home bx-sm' ></i> Inicio</a>
+                <a href="index.php" class="nav_links"><i class='bx bxs-home bx-sm' ></i> Inicio</a>
             </li>
             <li class="nav_items">
                 <a href="" class="nav_links"><i class='bx bxs-cheese bx-sm' ></i> Viveres</a>
@@ -31,7 +31,7 @@
                 <a href="" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
             </li>
             <li class="nav_items">
-                <a href="../Login/Login.html" class="nav_links"><i class='bx bxs-user-plus bx-sm' ></i>Iniciar Sesion</a>
+                <a href="Login-registro.php" class="nav_links"><i class='bx bxs-user-plus bx-sm' ></i> Registrate</a>
             </li>
             
             <img src="../images/bxl-xing.svg" alt="" class="nav_close">
@@ -44,34 +44,24 @@
 </header>
 
     <section id="banner">
-        <form action="../php/registro.php" method="POST" class="form">
-            <h2 class="form_title">Registrate Aqui</h2>
-            <p class="form_paragraph">Ya tienes cuenta <a href="../Login/Login.html" class="form_link">Ingresa Aqui</a></p>
+         <form action="../php/login.php" method="POST" class="form" id="login-for">
+            <h2 class="form_title">Inicia Sesion</h2>
+            <p class="form_paragraph">Aun no tienes cuenta? <a href="Login-registro.php" class="form_link">Entra Aqui</a></p>
 
             <div class="form_container">
                 <div class="form_group">
-                    <input type="text" id="name" class="form_input" placeholder="  ">
+                    <input type="text" id="name" class="form_input" name="nombre" placeholder="  ">
                     <label for="name" class="form_label">Ingrese Usuario:</label>
                     <span class="form_line"></span>
                 </div>
                 <div class="form_group">
-                    <input type="email" id="email" class="form_input" placeholder="  ">
-                    <label for="email" class="form_label">Correo:</label>
-                    <span class="form_line"></span>
-                </div>
-                <div class="form_group">
-                    <input type="tel" id="Telefono" min="10" max="15" class="form_input" placeholder="  ">
-                    <label for="Telefono" class="form_label">Telefono:</label>
-                    <span class="form_line"></span>
-                </div>
-                <div class="form_group">
-                    <input type="password" id="password" class="form_input" placeholder="  ">
+                    <input type="password" id="password" class="form_input" name="contra" placeholder="  ">
                     <label for="password" class="form_label">Contraseña:</label>
                     <span class="form_line"></span>
                 </div>
-                <input type="submit" class="form_submit" value="Registrarse">
+                <input type="submit" class="form_submit" value="Entrar">
             </div>
-        </form>
+</form>
     </section>
 
     

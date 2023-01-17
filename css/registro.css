@@ -182,6 +182,11 @@ header{
 
 /* form */
 
+.error{
+    color: red;
+    font-size: 0.8rem;
+}
+
 .form{
     color: black;
     background-color: #e5e5f7;
@@ -196,11 +201,12 @@ header{
     border-radius: 10px;
     box-shadow:0 5px 10px -5px rgb(0 0 0 / 30%);
     text-align: center;
+    
 }
 
 .form_title{
     font-size: 2em;
-    margin-bottom: .5em;
+    margin-bottom: .5em; 
 }
 
 .form_paragraph{
@@ -217,7 +223,7 @@ header{
 }
 
 .form_container{
-    margin-top: 3em;
+    margin-top: 2em;
     display: grid;
     gap: 2.5em;
 }
@@ -225,7 +231,9 @@ header{
 .form_group{
     position: relative;
     --color:#5757577e;
+    text-align: left;
 }
+
 .form_input{
     width: 100%;
     background:none;
@@ -238,26 +246,14 @@ header{
 
 }
 
-.form_input:not(:placeholder-shown){
-    color: #4d4646;
-}
-
-.form_input:focus + .form_label,
-.form_input:not(:placeholder-shown) + .form_label{
-    transform: translateY(-12px) scale(.7);
-    transform-origin: left top;
-    color: #3866f2;
-}
 
 .form_label{
-    color: var(--color);
+    color: #3866f2;
     cursor: pointer;
-    position:absolute;
-    top: 0;
-    left: 5px;
-    transform: translateY(10px);
-    transition: transform .5s, color .3s;
 }
+
+
+
 
 .form_submit{
     background: #3866f2;
@@ -268,23 +264,6 @@ header{
     border: none;
     border-radius: .5em;
     cursor: pointer;
-}
-
-.form_line{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #3866f2;
-    transform: scale(0);
-    transform: left bottom;
-    transition: transform .4s;
-}
-
-.form_input:focus ~ .form_line,
-.form_input:not(:placeholder-shown) ~ .form_line{
-   transform: scale(1);
 }
 
 @media (max-width:425px){

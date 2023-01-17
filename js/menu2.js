@@ -1,3 +1,5 @@
+//esto es para el slider de el index
+
 var index = 0;
 var i = 0;
 var slider = document.getElementsByClassName("slider");

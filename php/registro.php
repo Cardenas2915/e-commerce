@@ -2,21 +2,22 @@
 
 include('c.php');
 
-$usuario = $_POST['name'];
-$correo = $_POST['email'];
+$usuario = $_POST['nombre'];
+$correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
-$pass = $_POST['password'];
+$pass = $_POST['contra'];
+
 
 $verificacion =  mysqli_query ($conexion, "SELECT * FROM usuarios WHERE usuario = '$usuario'");
 
 $r = mysqli_num_rows($verificacion);
 
 
-if($ > 0){
+if($r > 0){
     echo '
     <script>
     alert("el nombre ya esta siendo usado");
-    location.href = "../";
+    location.href = "../login-registro.php";
     </script>
     ';
 
@@ -30,9 +31,12 @@ if($insertar){
     echo '
     <script>
     alert("registro exitoso");
-    location.href= "../";
+    location.href= "../Nav/Login.php";
     </script>
 
-    '
+    ';
 }
+
+mysqli_close($conexion);
+
 ?>
