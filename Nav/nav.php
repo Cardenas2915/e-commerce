@@ -15,7 +15,7 @@
             <img src="../images/logo.png" alt="" class="nav_title">
         </div>
         <div class="nav_nombre">
-            <h1 class="nombre">LA GRANJA EXPRESS S.A.S</h1>
+            <a href="index.php" class="nombre">LA GRANJA EXPRESS S.A.S</a>
             <p class="subnombre ">Supermercado </p>
         </div>
         <div id="back_menu"></div>
@@ -27,7 +27,7 @@
                 <a href="" class="nav_links"><i class='bx bxs-cheese bx-sm' ></i> Viveres</a>
             </li>
             <li class="nav_items">
-                <a href="" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
+                <a href="verduras.php" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
             </li>
             <li class="nav_items">
                 <a href="Login-registro.php" class="nav_links"><i class='bx bxs-user-plus bx-sm' ></i> Registrate</a>

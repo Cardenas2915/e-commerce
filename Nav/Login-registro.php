@@ -1,3 +1,7 @@
+<?php
+include("../php/seguridad.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +32,7 @@
                 <a href="" class="nav_links"><i class='bx bxs-cheese bx-sm' ></i> Viveres</a>
             </li>
             <li class="nav_items">
-                <a href="" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
+                <a href="verduras.php" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
             </li>
             <li class="nav_items">
                 <a href="Login.php" class="nav_links"><i class='bx bxs-user-plus bx-sm' ></i>Iniciar Sesion</a>

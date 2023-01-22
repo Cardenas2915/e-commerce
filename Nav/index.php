@@ -249,8 +249,8 @@ include("../php/sesion.php");
     </footer>
 <script src="../js/carrito.js"></script>
 <script src="../js/menuinicio.js"></script>
-<script src="../js/menu2.js"></script>
 <script src="../js/menu.js"></script>
+<script src="../js/sliderindex.js"></script>
 <script src="../js/questions.js"></script>
 
 

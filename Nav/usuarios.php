@@ -1,6 +1,7 @@
 <?php
 session_start();
  include("../php/c.php");
+ include("../php/no_ini.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@ session_start();
 <body>
 
 <?php
-include("../php/sesion.php")
+include("../php/sesion.php");
 ?>
 
 <div class="texto">
@@ -143,16 +144,16 @@ include("../php/sesion.php")
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="../php/eliminar.php" method="POST">
 
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Contraseña de seguridad:</label>
-            <input type="password" class="form-control" id="block_uno" disabled="">
+            <input type="password" class="form-control" name="eli_c" id="block_uno" disabled="">
           </div>
 
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Confirme contraseña:</label>
-            <input type="password" class="form-control" id="block_dos" disabled="">
+            <input type="password" class="form-control" name="eli_cd" id="block_dos" disabled="">
           </div>
 
           <div class="form-check">
@@ -160,11 +161,12 @@ include("../php/sesion.php")
             <label class="form-check-label" for="check_el">Estoy seguro de eliminar mi cuenta</label>
           </div>
 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary btn-danger">Eliminar</button>
+          </div>
+
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary btn-danger">Eliminar</button>
       </div>
     </div>
 
@@ -175,6 +177,10 @@ include("../php/sesion.php")
 
   </div>
 </div>
+
+<?php
+include("../php/alerta.php");
+?>
 
 
 

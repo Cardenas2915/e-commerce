@@ -6,6 +6,7 @@ body{
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 html{
     scroll-behavior:smooth;
@@ -81,14 +82,55 @@ header.down .container-icon{
     margin-right: 10px;
 }
 
-.nombre,
+.nombre{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
 .subnombre{
     color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav_items{
     list-style: none;
 }
+.nav_items ul{
+    position: absolute;
+    float: left;
+    padding: 0;
+    display: none;
+
+}
+
+.menu_des{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    background: rgba(0, 0, 0, 0.274);
+    border-radius: 10px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.nav_items ul li{
+    list-style: none;
+}
+
+.menu_des:hover{
+    background: rgba(0, 0, 0, 0.164);
+}
+
+
+.nav_items:hover > ul{
+    display: block;
+}
+ 
+
 
 .nav_links{
     color: white;
@@ -98,6 +140,7 @@ header.down .container-icon{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav_links:hover{
@@ -143,7 +186,7 @@ header.down .container-icon{
     display: grid;
     grid-template-columns:auto;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
 }
 
 .hero_tittle{

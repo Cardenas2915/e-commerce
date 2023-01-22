@@ -14,7 +14,7 @@
             <img src="../images/logo.png" alt="" class="nav_title">
         </div>
         <div class="nav_nombre">
-            <h1 class="nombre">LA GRANJA EXPRESS S.A.S</h1>
+            <a href="index.php" class="nombre">LA GRANJA EXPRESS S.A.S</a>
             <p class="subnombre ">Supermercado </p>
         </div>
         <div id="back_menu"></div>
@@ -26,17 +26,17 @@
                 <a href="" class="nav_links"><i class='bx bxs-cheese bx-sm' ></i> Viveres</a>
             </li>
             <li class="nav_items">
-                <a href="" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
+                <a href="verduras.php" class="nav_links"><i class='bx bxs-pear bx-sm'></i> Verduras</a>
             </li>
             <li class="nav_items">
-                <p class="nav_links"><i class='bx bx-user-check bx-flashing bx-sm' ></i> HOLA!  <?php echo $_SESSION['cliente']; ?>  </p>
+                <a class="nav_links"><i class='bx bx-user-check bx-flashing bx-sm' ></i> HOLA! <?php echo $_SESSION['cliente']; ?> </a>
+                <ul>
+                   <li><a class="menu_des" href="usuarios.php">Perfil </a></li>
+                   <li><a class="menu_des" href="#">Mis pedidos</a></li>
+                   <li><a class="menu_des" href="../php/cerrar_sesion.php">Cerrar sesion</a></li>
+                </ul>
             </li>
-            <li class="nav_items">
-                <a href="../php/cerrar_sesion.php" class="nav_links"><i class='bx bx-log-out bx-sm' ></i> Cerrar Sesion</a>
-            </li>
-            <li class="nav_items">
-                <a href="usuarios.php" class="nav_links"><i class='bx bx-log-out bx-sm' ></i>Perfil</a>
-            </li>
+            
            
             <img src="../images/bxl-xing.svg" alt="" class="nav_close">
         </ul>
