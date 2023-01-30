@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/verduras.css">
-    <link rel="stylesheet" href="../css/stylo.css">
+    <script src="../js/jquery-3.2.1.js"></script>
     <title>La granja Verduras</title>
 </head>
 <body>
@@ -42,20 +42,35 @@ include("../php/sesion.php");
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
-<section class="container_filtros">
-<div class="filtros">
+ 
+<section id="container_filtros">
+<div class="cont_filtro">
+<div class="filtro">
     <div class="filtro_marca">
         <h2 class="filtro_titulo">Filtrar por:</h2>
     </div>
-    <div class="buscar_filtro">
-    <h2>Frutas Y Verduras</h2>
-    <input type="search" name="busquedor" placeholder="Que estas buscando?" >
+    <div class="check">
+        <div class="category_lista">
+            <p href="#" class="category_item" category="all">Todos</p>
+            <p href="#" class="category_item" category="frutas">Frutas</p>
+            <p href="#" class="category_item" category="verduras">Verduras</p>
+            <p href="#" class="category_item" category="pulpas">pulpas</p>
+        </div>
     </div>
-    <div class="total_filtro">
-        <p>Total productos</p>
-    </div>
-    <div class="ordenar_filtro">
+</div>
+    <div class="filtro1">
+    <div class="encabezado_filtros">
+
+        <div class="buscar_filtro">
+            <h2>Frutas Y Verduras</h2>
+        </div>
+        <div class="buscador_cont">
+            <input type="search" name="buscador" class="buscador" id="buscador" placeholder="Que estas buscando?" >
+        </div>
+        <div class="total_filtro">
+            <p>100 Productos</p>
+        </div>
+        <div class="ordenar_filtro">
         <p>Ordenar por:</p>
         <div class="selector">
             <select name="formato" id="formato">
@@ -66,28 +81,93 @@ include("../php/sesion.php");
                 <option value="ordenar">Z-A</option >
             </select>
         </div>
-    </div>
-    <div class="check">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-            <label class="form-check-label" for="flexCheckChecked">Verduras</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-            <label class="form-check-label" for="flexCheckChecked">Frutas</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-            <label class="form-check-label" for="flexCheckChecked">Pulpa de fruta</label>
         </div>
     </div>
+        <div class="productos">
+        
+            <article class="card" category="frutas">
+                    <img src="../images/banano.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Bananos x kg</h3>
+                    <p class="card_precio">$2000</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="frutas">
+                    <img src="../images/mango.png" alt="" class="icon_card">
+                    <h3 class="card_nombre">Mango x kg</h3>
+                    <p class="card_precio">$2000</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+
+            <article class="card" category="verduras">
+                    <img src="../images/zanahoria.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">zanahoria x kg</h3>
+                    <p class="card_precio">$2150</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="verduras" >
+                    <img src="../images/papa_lav.png" alt="" class="icon_card">
+                    <h3 class="card_nombre">Papa lavada x kg</h3>
+                    <p class="card_precio">$1150</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="verduras" >
+                    <img src="../images/arveja.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Arveja x kg</h3>
+                    <p class="card_precio">$1150</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="pulpas">
+                    <img src="../images/pulpa_piña.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Pulpa de piña</h3>
+                    <p class="card_precio">$2850</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="frutas" >
+                    <img src="../images/manzana.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Manzana Roja Und</h3>
+                    <p class="card_precio">$1800</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="pulpas">
+                    <img src="../images/pulpa_mango.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Pulpa de mango</h3>
+                    <p class="card_precio">$2850</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="pulpas">
+                    <img src="../images/pulpa_mora.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Pulpa de mora</h3>
+                    <p class="card_precio">$2850</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="frutas">
+                    <img src="../images/tomate_arbol.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Tomate de arbol x kg</h3>
+                    <p class="card_precio">$2000</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="verduras" >
+                    <img src="../images/cabezona.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Cebolla Cabezona x kg</h3>
+                    <p class="card_precio">$1150</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            <article class="card" category="pulpas">
+                    <img src="../images/pulpa_fresa.jpg" alt="" class="icon_card">
+                    <h3 class="card_nombre">Pulpa de fresa</h3>
+                    <p class="card_precio">$2850</p>
+                    <button class="card_carrito">Añadir al carrito</button>
+            </article>
+            
+            
+        </div>
+    </div>
+
+        
 </div>
 </section>
-
-
+<script src="../js/busqueda.js"></script>
+<script src="../js/filtrar.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/carrito.js"></script>
-<script src="../js/menuinicio.js"></script>
-<script src="../js/menu.js"></script>
 </body>
 </html>

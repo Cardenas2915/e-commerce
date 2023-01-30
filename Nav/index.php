@@ -247,11 +247,8 @@ include("../php/sesion.php");
             <h3 class="footer_copyright">Derechos reservados &copy; Eduar Cruz</h3>
         </section>
     </footer>
-<script src="../js/carrito.js"></script>
-<script src="../js/menuinicio.js"></script>
-<script src="../js/menu.js"></script>
-<script src="../js/sliderindex.js"></script>
-<script src="../js/questions.js"></script>
+    <script src="../js/sliderindex.js"></script>
+    <script src="../js/questions.js"></script>
 
 
     

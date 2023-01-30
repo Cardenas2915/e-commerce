@@ -19,7 +19,7 @@ h1{
     --padding-container:100px 0;
     --color-title:#001A49;
 }
-header{
+/* header{
     z-index: 999;
     position: fixed;
     top: 0;
@@ -63,10 +63,10 @@ header.down .container-icon{
     color: black;
 }
 
+ */
 
 
-
-.abajo{
+/* .abajo{
     background: rgb(37, 37, 37);
     padding: 15px 20px;
 }
@@ -167,7 +167,7 @@ header.down .container-icon{
     gap: 2em;
     justify-content: center;
     align-items: center;
-}
+} */
 
 #banner:before{
     content: "";
@@ -187,6 +187,7 @@ header.down .container-icon{
     grid-template-columns:auto;
     justify-content: center;
     margin-bottom: 110px;
+    margin-top: 10rem;
 }
 
 .hero_tittle{
@@ -216,16 +217,15 @@ transform: scale(1.1);
     align-content: center;
     gap: 1em;
     text-align: center;
-    padding-top: 280px;
-    margin-bottom: 250px;
+    padding-top: 150px;
 }
 
 
 /* carrito */
-
+/* 
 .hidden-cart{
     display: none;
-}
+} 
 
 .container-icon{
     position: relative;
@@ -292,11 +292,12 @@ transform: scale(1.1);
 .icon-close{
     cursor: pointer;
 }
-
+ */
 
 /* Slider */
 
 .slider_auto{
+    margin-top: 20rem;
     width: 100%;
     height: auto;
     background: rgba(92, 88, 88, .6);

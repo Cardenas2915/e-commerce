@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 body{
     font-family: 'Poppins', sans-serif; 
+    
 }
 
+#banner:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/canasta.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+#banner{
+    color: #fff;
+    display: grid;
+    grid-template-columns:auto;
+    justify-content: center;
+    margin-bottom: 110px;
+}
 #publicidad{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 .texto_publi{
     margin-top: 80px;
@@ -22,19 +42,24 @@ body{
 
 /* FILTROS */
 
-.container_filtros{
+#container_filtros{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 7rem;
-}
-.filtros{
-    width: 95%;
-    display: grid;
-    grid-template-columns:200px auto 150px 250px;
-    grid-template-rows:50px 100px auto;
-    gap: 2rem;
     
+}
+.cont_filtro{
+  display: flex;
+  width: 90%;
+
+}
+.filtro{
+    display: grid;
+    grid-template-columns:180px;
+    grid-template-rows:50px;
+    gap: 2rem;
+
 }
 .filtro_marca{
     border-bottom: 1px solid rgba(128, 128, 128, 0.541);
@@ -48,10 +73,191 @@ body{
 }
 .buscar_filtro{
     display: flex;
+    font-size: 1.5rem;
     align-items: center;
-    border: 1px solid rgba(128, 128, 128, 0.479);
+    padding: 0px 10px;
+    align-items: center;
 }
 .buscar_filtro h2{
     font-size: 1.5rem;
     
+}
+.buscador_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total_filtro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.encabezado_filtros{
+    display: grid;
+    grid-template-columns: auto 230px 130px 260px ;
+    grid-template-rows:50px;
+    border: 1px solid rgba(128, 128, 128, 0.479);
+    gap: 2rem;
+}
+.filtro1{
+    width: 100%;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-rows:50px auto;
+}
+
+.buscador{
+    display: flex;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.ordenar_filtro{
+    display: flex;
+    justify-content:space-between ;
+    padding: 10px;
+   
+}
+
+.productos{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.card{
+    width: 250px;
+    transition: all 0.3s;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.card_nombre{
+text-align: center;
+font-size: 1.4rem;
+}
+.card_precio{
+    text-align: center;
+    font-size: 1rem;  
+    color: blue;
+}
+.card_carrito{
+    padding: 5px;
+    border-radius: 10px;
+    display:inline-flex;
+    text-decoration: none;
+    background: rgba(108, 20, 250, 0.932);
+    color: #fff;
+    transition: all 0.3s;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    width: 150px;
+}
+.card_carrito:hover{
+    transform: scale(1.1);
+    background: rgba(79, 32, 155, 0.932)
+}
+
+.filter{
+    display: none;
+}
+.category_lista{
+    display: flex;
+    flex-direction: column;
+}
+.category_item{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background: rgba(108, 20, 250, 0.932);
+    margin-bottom: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+.category_lista .item_active{
+    background:rgba(24, 38, 114, 0.932) ;
+}
+
+@media (max-width:1024px){
+    
+    .productos{
+        margin-top: 100px;
+    }
+    .card{
+        width: 200px;
+    }
+    .buscar_filtro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:0 ;
+        width: 80vh;
+    }
+    .buscar_filtro h2{
+        margin-top: 10px;
+    }
+    .encabezado_filtros{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
+    .texto_publi{
+        font-size: 4rem;
+    }
+    
+}
+
+@media (max-width:768px){
+    
+    .productos{
+        margin-top: 100px;
+    }
+
+    .filtro_marca, .check{
+        width: 100px;
+    }
+    .filtro{
+        width: 100px;
+    }
+    .filtro_titulo, .category_item{
+        font-size:  1rem; 
+    }
+    .card{
+        width: 170px;
+    }
+    .buscar_filtro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:0 ;
+        width: 40vh;
+    }
+    .buscar_filtro h2{
+        margin-top: 10px;
+    }
+    .encabezado_filtros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
+    #buscador{
+        font-size: 0.8rem;
+        width: 170px;
+    }
+    .texto_publi{
+        font-size: 3rem;
+    }
 }
