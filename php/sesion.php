@@ -1,4 +1,5 @@
 <?php
+//esto es para incluir la barra de navegacion con o sin sesion activa
 error_reporting(0);
 session_start();
 

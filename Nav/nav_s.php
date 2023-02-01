@@ -26,7 +26,7 @@
             <li class="nav_items">
                 <a class="nav_links"><i class='bx bx-user-check bx-flashing bx-sm' ></i> HOLA! <?php echo $_SESSION['cliente']; ?> </a>
                 <ul>
-                    <li><a class="menu_des" href="usuarios.php">Perfil </a></li>
+                    <li><a class="menu_des" href="perfil.php">Perfil </a></li>
                     <li><a class="menu_des" href="#">Mis pedidos</a></li>
                     <li><a class="menu_des" href="../php/cerrar_sesion.php">Cerrar sesion</a></li>
                 </ul>

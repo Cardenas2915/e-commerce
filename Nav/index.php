@@ -25,7 +25,7 @@ include("../php/sesion.php");
     </section>
 
     <section class="slider_auto">
-     <div class="slider_container">
+        <div class="slider_container">
         <div class="slider">
         <a href=""> <img src="../images/slider1.png" alt="Imagen Slider"></a>
         </div>
@@ -38,17 +38,17 @@ include("../php/sesion.php");
             <div class="slider">
             <a href=""> <img src="../images/slider3.png" alt="Imagen Slider"></a>
             </div>
-       <div class="prev-button" onclick="plusSlide(-1)">&#10094;</div>
-       <div class="next-button" onclick="plusSlide(1)"> &#10095;</div>
+        <div class="prev-button" onclick="plusSlide(-1)">&#10094;</div>
+        <div class="next-button" onclick="plusSlide(1)"> &#10095;</div>
 
         <div class="lines">
-          <div class="line" onclick="currentSlide(1)"><img src="../images/bxs-circle.svg" alt=""></div>
-          <div class="line" onclick="currentSlide(2)"><img src="../images/bxs-circle.svg" alt=""> </div>
-          <div class="line" onclick="currentSlide(3)"><img src="../images/bxs-circle.svg" alt=""> </div>
-          <div class="line" onclick="currentSlide(4)"><img src="../images/bxs-circle.svg" alt=""> </div>
+            <div class="line" onclick="currentSlide(1)"><img src="../images/bxs-circle.svg" alt=""></div>
+            <div class="line" onclick="currentSlide(2)"><img src="../images/bxs-circle.svg" alt=""> </div>
+            <div class="line" onclick="currentSlide(3)"><img src="../images/bxs-circle.svg" alt=""> </div>
+            <div class="line" onclick="currentSlide(4)"><img src="../images/bxs-circle.svg" alt=""> </div>
         </div>
 
-     </div>
+    </div>
     </section>
 
     <section class="about" id="promos">

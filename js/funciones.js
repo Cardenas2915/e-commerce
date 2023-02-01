@@ -104,12 +104,12 @@ $('#guardar').click(function(){
         success:function(vs){
             if(vs == 1){
                 alertify.success("Datos actualizados");
-                $('#tabla_user').load('../Nav/usuarios.php #tabla_user');
+                $('#tabla_user').load('../Nav/cliente.php #tabla_user');
                 $ ('#mod_per').modal('hide');
             
             }else if(vs == 2){
                 alertify.success("Contraseña y datos actualizados");
-                $('#tabla_user').load('../Nav/usuarios.php #tabla_user');
+                $('#tabla_user').load('../Nav/cliente.php #tabla_user');
                 $ ('#mod_per').modal('hide');
             }else{
                 alertify.error("la contraseña no es correcta");

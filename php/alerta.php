@@ -7,18 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="alert alert-danger position-absolute d-inline-flex p-2" role="alert">
-  <p>La sesion expira en:&nbsp</p><div id="number" class="text-danger"></div>
+    <div class="alert alert-secondary position-absolute d-inline-flex p-2" role="alert">
+        <p>La sesion expira en:&nbsp</p><div id="number" class="text-danger">
     </div>
 
     <!-- esto es hacer el conteo para cerrar sesion despues de un tiempo de inactividad -->
 
     <script type="text/javascript">
-        var n = 30;
+        var n = 60;
         var l = document.getElementById("number");
         var id = window.setInterval(function(){
             document.onmousemove = function(){
-                n = 30
+                n = 60
             };
 
             l.innerText = n;

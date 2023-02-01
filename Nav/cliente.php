@@ -1,7 +1,6 @@
 <?php
-session_start();
- include("../php/c.php");
- include("../php/no_ini.php")
+  include("../php/c.php");
+  include("../php/no_ini.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +9,9 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/usuarios.css">
-    <link rel="stylesheet" href="../css/stylo.css">
-     <!-- este link es de alertify cdn  -->
-     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="../css/cliente.css">
+      <!-- este link es de alertify cdn  -->
+      <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <!-- Default theme -->
@@ -26,13 +24,17 @@ session_start();
 <?php
 include("../php/sesion.php");
 ?>
+<div class="alerta">
+  <?php include("../php/alerta.php");?>
+</div>
+<div id="banner"></div>
 
-<div class="texto">
+<div class="titulo">
     <h1 class="nombre">Bienvenido <?php echo $_SESSION['cliente']; ?> </h1>
 </div>
 
-<div class="texto2">
-    <h1 class="info">Informacion del perfil</h1>
+<div class="titulo2">
+    <h1 class="info">Mi información personal</h1>
 </div>
 
 <div class="container-tabla">
@@ -61,7 +63,7 @@ include("../php/sesion.php");
     </tr>
     <tr>
         <th>contraseña:</th>
-        <td> <?php echo $consulta['contraseña']; ?> </td>
+        <td> <input type="password" class="caja_contra" value="<?php echo $consulta['contraseña']; ?>" disabled> </td>
     </tr>
 
     <?php } ?>
@@ -109,7 +111,7 @@ include("../php/sesion.php");
 
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Contraseña actual:</label>
-            <input type="password" class= "form-control" name="contra" value="<?php echo $consulta['contraseña']; ?>">
+            <input type="password" class= "form-control" name="contra" value="">
           </div>
 
           <div class="mb-3">
@@ -172,17 +174,11 @@ include("../php/sesion.php");
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Advertencia!</strong> Al borrar la cuenta sus datos se eliminaran.
-         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
   </div>
 </div>
-
-<?php
-include("../php/alerta.php");
-?>
-
-
 
 </div>
 <!-- este jquery es para validar los checkbox  -->
