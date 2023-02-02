@@ -42,7 +42,7 @@ include("../php/sesion.php");
         <span class="visually-hidden">Next</span>
     </button>
 </div>
- 
+
 <section id="container_filtros">
 <div class="cont_filtro">
 <div class="filtro">
