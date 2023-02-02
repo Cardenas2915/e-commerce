@@ -63,7 +63,7 @@ include("../php/sesion.php");
     </tr>
     <tr>
         <th>contraseña:</th>
-        <td> <input type="password" class="caja_contra" value="<?php echo $consulta['contraseña']; ?>" disabled> </td>
+        <td> <input type="password" class="caja_contra"  value="<?php echo $consulta['contraseña']; ?>" disabled> </td>
     </tr>
 
     <?php } ?>
