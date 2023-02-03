@@ -38,16 +38,6 @@ body{
     font-size: 4rem;
     margin-bottom: 2rem;
 }
-.titulo2{
-    display: flex;
-    margin-left: 30rem;
-    align-items: center;
-}
-.titulo2 h1{
-    font-size: 1.5rem;
-    color: #fff;
-}
-
 .cont_boton{
     padding: 30px 0px;
     width: 50%;
@@ -58,5 +48,39 @@ body{
 .caja_contra{
     border: none;
     text-align: center;
+    border-radius: 1rem;
+}
+/* cajitas de la tabla cliente info */
+.container-tabla{
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+}
+.tabla{
+    width: 500px; 
+    border-radius: 2rem;
+    height: 160px;
+    
+    
 }
 
+
+.tabla tr th{
+    background-color: rgba(247, 253, 251, 0.685);
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+    padding: .3rem;
+}
+.tabla tr td{
+    background-color: rgb(160, 216, 158);
+    border-radius: 0px 10px 10px 0px ;
+    display: flex; 
+    justify-content: center;
+    padding: .3rem;
+    font-size: 18px;
+    height: 100%;
+
+}
