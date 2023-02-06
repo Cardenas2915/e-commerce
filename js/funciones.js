@@ -93,6 +93,7 @@ if($(this).is(':checked')){
 // esta parte es para actualizar y reflejar los datos de la tabla de perfil
 
 $('#guardar').click(function(){
+    
 
     var recolectar = $('#cambiar').serialize();
 

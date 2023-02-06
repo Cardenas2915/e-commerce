@@ -32,6 +32,7 @@ h1{
     display: grid;
     grid-template-rows: 100px 1fr;
     color: white;
+    padding-top: 2rem;
     
 }
 
@@ -59,7 +60,16 @@ h1{
 
     
 .nav_logo img{
-    width: 10rem;
+    width: 6rem;
+}
+.nav_logo{
+    margin-right: 1rem;
+}
+.nombre{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight:bold;
 }
 .nav_link{
     margin-left: auto;
@@ -69,6 +79,9 @@ h1{
     grid-auto-columns: max-content;
     gap: 2em;
 }
+.nav_links:hover{
+    background: rgba(255, 255, 255, 0.493);
+}
 .nav_items{
     list-style: none;
 }
@@ -76,6 +89,9 @@ h1{
 .nav_links{
     color: white;
     text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 .nav_menu{
     margin-left: auto;
@@ -115,6 +131,10 @@ h1{
     padding: 13px 30px;
     border-radius: 30px;
     color: white;
+    transition: all .3s;
+}
+.cta:hover{
+    transform: scale(1.1);
 }
 
 
@@ -244,6 +264,13 @@ display: block;
     color: var(--color-cta);
     position: relative;
     overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+.price_cta:hover{
+    background: #001a49d0;
+    color: #fff;
+    transform: scale(1.1);
+
 }
 
 

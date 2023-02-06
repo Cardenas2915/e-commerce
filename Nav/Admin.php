@@ -11,6 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/admin.css">
+      <!-- este link es de alertify cdn  -->
+      <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +24,8 @@
 <?php
 include("../php/sesion.php");
 ?>
-<h1 class="titulo">lista de usuarios registrados</h1>
+<div id="banner"></div>
+<h1 class="titulo">Usuarios Registrados</h1>
 
 <table class="table table-light table-striped" id="adm">
     <thead>
@@ -49,7 +56,7 @@ while($consulta = mysqli_fetch_array($data)){
         <td> <?php echo $consulta['telefono']; ?> </td>
         <td> <?php echo $consulta['rol']; ?> </td>
         <td> <button type="button" data-bs-toggle="modal" data-bs-target="#editar" class="btn btn-success" onclick="modificar('<?php echo $arreglo ?>')" >Modificar</button></td>
-        <td> <button type="button" data-bs-toggle="modal" data-bs-target="#eliminar" class="btn btn-dark">Eliminar</button></td>
+        <td> <button type="button" data-bs-toggle="modal" data-bs-target="#eliminar" class="btn btn-dark" onclick="eliminar('<?php echo $arreglo ?>')">Eliminar</button></td>
         </tr>
     </tbody>
 <?php } ?>
@@ -67,26 +74,26 @@ while($consulta = mysqli_fetch_array($data)){
         </div>
 
         <div class="modal-body">
-        <form>
+        <form id="form_agg">
 
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Usuario:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="adm_usuario" name="adm_usuario">
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">correo:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="adm_correo" name="adm_correo">
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">telefono:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="adm_telefono" name="adm_telefono">
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">contraseña:</label>
-                <input type="text" class="form-control">
+                <input type="password" class="form-control" id="adm_pass" name="adm_pass">
             </div>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Agregar</button>
+            <button type="button" class="btn btn-primary" id="agg_adm">Agregar</button>
 
         </form>
     </div>
@@ -139,29 +146,49 @@ while($consulta = mysqli_fetch_array($data)){
     <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Estas seguro de eliminar este usuario?</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Usuario</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body">
-        <form>
+        <form id="enviar_eli">
 
             <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">ID:</label>
-                <input type="text" class="form-control">
+                <label for="recipient-name" class="col-form-label" id="id_eli_label">ID:</label>
+                <input type="text" class="form-control" id="id_eli" name="id_eli" hidden="">
             </div>
             <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Usuario:</label>
-                <input type="text" class="form-control">
+                <label for="recipient-name" class="col-form-label" id="u_eli_label">Usuario:</label>
+                <input type="text" class="form-control" id="u_eli" name="u_eli" hidden="">
             </div>
+            <div class="mb-3">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <button type="button" class="btn btn-danger" id="eli_" name="eli_">Eliminar</button>
+            </div>
+            
 
         </form>
     </div>
     </div>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Advertencia!</strong>¿Estas seguro de eliminar este usuario?, se elimanara de forma permanente!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
     </div>
 </div>
+
+<footer class="footer">
+            <div class="footer_social">
+                <p class="redes">SIGUENOS EN:</p>
+                <a href="" class="footer_icons"><img src="../images/bxl-facebook.svg" alt="" class="footer_img"></a>
+                <a href="" class="footer_icons"><img src="../images/bxl-gmail.svg" alt="" class="footer_img"></a>
+                <a href="" class="footer_icons"><img src="../images/bxl-instagram.svg" alt="" class="footer_img"></a>
+            </div>
+        
+        <div class="footer_copy">
+            <h3 class="footer_copyright">Derechos reservados &copy; Eduar Cruz</h3>
+        </div>
+    </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>

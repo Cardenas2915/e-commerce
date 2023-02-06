@@ -1,42 +1,27 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="text" name="numero">
+        <button type="submit">Enviar</button>
+    </form>
 
+    <?php
 
-date_default_timezone_set("America/Cayenne");
-
-function Español(){
-
-    $fecha_dia = date("d");
-    $fecha_mes = date("m");
-    $fecha_year = date("Y");
-
-    $dia_semana = [
-        "Monday" => "Lunes",
-        "Tuesday" => "Martes",
-        "Wednesday" => "Miercoles",
-        "Thursday" => "Jueves",
-        "Friday" => "Viernes",
-        "Saturday" => "Sabado",
-        "Sunday" => "Domingo"
-
-    ];
-
-    $meses_year = [
-
-        "01" => "Enero",
-        "02" => "Febrero",
-        "03" => "Marzo",
-        "04" => "Abril",
-        "05" => "Mayo",
-        "06" => "Junio"
-
-    ];
-
-    $fecha_final = $dia_semana[date("l")]. " " . $fecha_dia. " de " . $meses_year[$fecha_mes]. " de " . $fecha_year;
-
-    return $fecha_final;
-
+if(isset($_POST['numero']) && $_POST['numero']!=""){
+    $numero=$_POST['numero'];
+    for($i=12; $i>=1; $i--){
+        echo $numero. " X " . $i . " = " .$i*$numero. "<br>"; 
+    }
+}else{
+    echo "seleccione su numero";
 }
-
-echo Español();
-
-
+?>
+</body>
+</html>

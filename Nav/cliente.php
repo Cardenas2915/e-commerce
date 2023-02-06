@@ -25,7 +25,7 @@
 include("../php/sesion.php");
 ?>
 <div class="alerta">
-  <?php include("../php/alerta.php");?>
+  <?php// include("../php/alerta.php");?>
 </div>
 <div id="banner"></div>
 
@@ -33,12 +33,8 @@ include("../php/sesion.php");
     <h1 class="nombre">Bienvenido <?php echo $_SESSION['cliente']; ?> </h1>
 </div>
 
-<div class="titulo2">
-    <h1 class="info">Mi información personal</h1>
-</div>
-
 <div class="container-tabla">
-    <table class="table table-light table-hover mx-auto text-center w-50" id="tabla_user">
+    <table class="tabla" id="tabla_user">
 
     <?php
     $cliente = $_SESSION['cliente'];
@@ -49,11 +45,11 @@ include("../php/sesion.php");
     ?>
 
     <tr>
-        <th>Usuario:</th>
+        <th class="mt-3">Usuario:</th>
         <td> <?php echo $consulta['usuario']; ?> </td>
     </tr>
 
-    <tr>
+    <tr >
         <th>Correo:</th>
         <td> <?php echo $consulta['correo']; ?> </td>
     </tr>
@@ -61,13 +57,13 @@ include("../php/sesion.php");
         <th>Telefono:</th>
         <td> <?php echo $consulta['telefono']; ?> </td>
     </tr>
-    <tr>
+    <tr >
         <th>contraseña:</th>
-        <td> <input type="password" class="caja_contra" value="<?php echo $consulta['contraseña']; ?>" disabled> </td>
+        <td> <input type="password" class="caja_contra"  value="<?php echo $consulta['contraseña']; ?>" disabled> </td>
     </tr>
 
     <?php } ?>
-
+    
     </table>
 
     <div class="cont_boton">

@@ -38,7 +38,7 @@ $cliente = $_SESSION['cliente'];
             echo'
             <script>
             alert("contraseña incorrecta");
-            location.href = "../Nav/usuarios.php";
+            location.href = "../Nav/perfil.php";
             </script>
         ';
         }
@@ -48,7 +48,7 @@ $cliente = $_SESSION['cliente'];
         echo'
             <script>
             alert("Las contraseñas no coinciden");
-            location.href = "../Nav/usuarios.php";
+            location.href = "../Nav/perfil.php";
             </script>
         ';
     }
