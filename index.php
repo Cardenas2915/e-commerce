@@ -12,16 +12,12 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <?php
+  <h3>Subir archivp con Php</h3>
 
-if(isset($_POST['numero']) && $_POST['numero']!=""){
-    $numero=$_POST['numero'];
-    for($i=12; $i>=1; $i--){
-        echo $numero. " X " . $i . " = " .$i*$numero. "<br>"; 
-    }
-}else{
-    echo "seleccione su numero";
-}
-?>
+  <form action="formulario.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="fichero">
+    <br>
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
